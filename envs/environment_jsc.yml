@@ -9,68 +9,42 @@ dependencies:
   - matplotlib-base
   - pandas
   - xarray
+  - dask
+  - distributed
+  - dask-jobqueue
   # data science stuff
   - scikit-image
   - scikit-learn
   - dask-ml
   # pyviz
   - holoviews
-  - panel
-  - jupyter-panel-proxy
   - geoviews
   - hvplot
   - datashader
   - seaborn
-  - altair
-  - descartes
-  - folium
-  - vega
-  - vega_datasets
   # geospatial
   - iris
   - cartopy
+  - cartopy_offlinedata
   - basemap
-  - geopandas
-  - rasterio
   - netcdf4
-  - erddapy
-  - pydap
   - h5py
   - h5netcdf
-  - regionmask
-  - rio-cogeo
   # geoscience-related
-  - climlab
-  - metpy
-  - satpy
   - gsw
-  - esmpy
-  - xesmf
   - windspharm
   # intake-related
   - intake
   - intake-xarray
-  - intake-esm
-  - fsspec
-  - intake-stac
-  - sat-stac
-  - sat-search
   # zarr-related
   - zarr
   - numcodecs
   - python-blosc
   - lz4
-  - gcsfs>=0.5.2
-  - s3fs
-  - tiledb-py
   # jupyter-related
-  - ipyleaflet
   - ipykernel
   # xarray-related
-  - xgcm
   - xhistogram
-  - xlrd
-  - xrviz
-  - climpred
-  - pytide
-  - pyinterp
+  - pip
+  - pip:
+    - fastparquet
