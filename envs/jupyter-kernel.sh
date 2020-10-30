@@ -1,16 +1,14 @@
 #!/bin/bash
 
 module purge --force
-export CONDA_TARGET_DIR=/p/project/training2005/geomar_challenge/kernel
+export CONDA_TARGET_DIR=/p/scratch/training2005/geomar_challenge/kernel
 export JUPYTER_KERNEL_NAME=GEOMAR-challenge
 
 if [ "${1}" == "install" ]; then
 
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh --quiet
-./Miniconda3-latest-Linux-x86_64.sh -b -f -p ${CONDA_TARGET_DIR}
-
-wget https://raw.githubusercontent.com/geomar-tm/visualize-15-million-trajectories/master/envs/environment_jsc.yml --quiet
-${CONDA_TARGET_DIR}/bin/conda env create -f environment_jsc.yml
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b -f -p ${CONDA_TARGET_DIR}
+${CONDA_TARGET_DIR}/bin/conda env create -f environment.yml
 
 rm Miniconda3-latest-Linux-x86_64.sh
 ${CONDA_TARGET_DIR}/bin/conda clean --all --yes
